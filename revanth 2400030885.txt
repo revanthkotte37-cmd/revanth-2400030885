@@ -1,0 +1,38 @@
+
+git init
+
+echo "<h1>Student Portal</h1>" > index.html
+echo "console.log('App loaded');" > app.js
+echo "body { font-family: Arial; }" > style.css
+
+git add .
+
+git commit -m "Initial commit with base files"
+
+git checkout -b feature-login
+
+echo "function login() { console.log('User logged in'); }" >> app.js
+git add app.js
+git commit -m "Add login functionality"
+
+git checkout main
+
+echo "h1 { color: blue; }" >> style.css
+git add style.css
+git commit -m "Update styles on main branch"
+
+git merge feature-login
+
+git add .
+git commit -m "Resolve merge conflicts between main and feature-login"
+
+git diff
+
+git reset
+
+git checkout -- app.js
+
+git tag v1.0
+
+git tag
+git branch
